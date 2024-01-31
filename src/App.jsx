@@ -1,33 +1,64 @@
-import './App.css'
-// import {typography} from '@mui/material'
-import {Typography, AppBar,Card,CardActions,CardContent,CardMedia,CssBaseline,Grid,Toolbar, Container,Button} from '@mui/material'
-import { PhotoCamera} from '@mui/icons-material'
-const App = () => {
-    
-    return(
-        <>
-        <CssBaseline/>
-        <AppBar position='relative'>
-            <Toolbar>
-                <PhotoCamera/>
-                <Typography variant='h6'>Photo Album</Typography>
-            </Toolbar>
-        </AppBar>
-        <main>
-            <div>
-                <Container maxWidth='sm'>
-                    <Typography variant='h2' align='center'  gutterBottom>Photo Album</Typography>
-                    <Typography variant='h5' align='center' color='GrayText' paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nulla nisi nam dolorum quis, odio ipsum tempore sunt non minus doloribus officiis eos praesentium sapiente sint a incidunt quia facere!</Typography>
-                    <div>
-                        <Grid>
-                            <Button color='primary' variant='contained' align='center'>See my photos</Button>
-                        </Grid>
-                    </div>
-                </Container>
-            </div>
-        </main>
-        </>
-    )
-}
+import "./App.css";
+import {
+  TextField,
+  Stack,
+  Typography,
+  Container,
+  Button,
+} from "@mui/material";
 
-export default App
+const App = () => {
+  return (
+    <>
+      <Container
+        align="center"
+        sx={{
+          width: "600px",
+          height: "450px",
+          border: "2px solid #ddd",
+          borderRadius: "10px",
+          padding: "20px",
+          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Stack>
+          <Typography variant="h4">Login Form</Typography>
+
+          <TextField
+            id="outlined-basic"
+            label="Username"
+            variant="outlined"
+            margin="normal"
+            placeholder="Enter Username..."
+          />
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            margin="normal"
+            placeholder="Enter your email..."
+          />
+          <TextField
+            id="outlined-basic"
+            label="Password"
+            variant="outlined"
+            margin="normal"
+            placeholder="Enter your password..."
+          />
+          <TextField
+            id="outlined-basic"
+            label="Phone No."
+            variant="outlined"
+            margin="normal"
+            placeholder="Enter phone number..."
+          />
+          <Button variant="contained" color="primary">
+            Login
+          </Button>
+        </Stack>
+      </Container>
+    </>
+  );
+};
+
+export default App;
