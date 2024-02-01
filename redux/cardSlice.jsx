@@ -16,16 +16,16 @@ export const cardSlice = createSlice({
   name: "card",
   initialState,
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchUsers.pending, (state) => {
+
+      builder.addCase(fetchUsers.pending, (state) => {
         state.loading = true;
         state.error = null;
-      })
-      .addCase(fetchUsers.fulfilled, (state, action) => {
+      });
+      builder.addCase(fetchUsers.fulfilled, (state, action) => {
         state.loading = false;
         state.users = action.payload;
-      })
-      .addCase(fetchUsers.rejected, (state, action) => {
+      });
+      builder.addCase(fetchUsers.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
